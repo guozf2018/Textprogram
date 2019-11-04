@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title></title>
+<style> 
+ 
+body,html{
+	position:reletive;
+}
+li{
+	list-style:none;
+
+}
+.menu
+{   
+	position:absolute;
+	background:blue;
+	position:absolute;
+	width:200px;
+	height:300px;
+	transition:all 4s;//转换时间
+}
+ 
+.menu:hover
+{
+	background:yellow;
+	width:100px;
+	height:300px;
+	animation:menu 4s;//动画时间
+}
+	
+@keyframes menu
+{
+ 
+}
+	
+</style>
+</head>
+<body>
+<div>
+	<div id="triggleBtn" class="menuBtn" onclick="triggleMenu()"></div>
+
+</div>
+<li class="menu">
+	<ol>one</ol>
+	<ol>two</ol>
+	<ol>three</ol>
+	<ol>four</ol>
+</li>
+<script>
+	//改变菜单符号
+	function triggleMenu(){
+		var dom = document.getElementById("triggleBtn");
+		if(dom.innerText == '>'){
+			dom.innerText = "<";
+		}else{
+			dom.innerText = ">"
+		}
+	}	
+	function createMenu(){
+		
+	}
+
+</script>
+</body>
+</html>
